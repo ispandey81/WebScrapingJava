@@ -1,12 +1,9 @@
-import org.apache.commons.lang3.ArrayUtils;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -17,7 +14,6 @@ public class PublicHolidayParser {
     }
 
     public static void displayParsedHolidays() {
-        String divider = "=";
         String publicHolidaysUrl = "https://www.commerce.wa.gov.au/labour-relations/public-holidays-western-australia";
         try {
             Document doc = Jsoup.connect(publicHolidaysUrl).get();
